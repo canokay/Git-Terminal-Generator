@@ -2,6 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
+    <title>Git Terminal Generator</title>
     <link rel="stylesheet" type="text/css" href="css/reset.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
@@ -14,8 +15,9 @@
         <div class="container ml-auto mr-auto">
         <div class="navbar-translate">
             <a class="navbar-brand" href="#" >
-                 <img src="img/logo.jpg" width="30" height="30" class="d-inline-block align-top" alt="">
-                    Can Okay PHP 
+                 
+                    <i class="fab fa-git"></i>
+                    Git Terminal Generator
             </a>
             </div>
         </div>
@@ -97,6 +99,7 @@
             
             document.getElementById("existingGitrepository").innerHTML = "cd existing_folder  "+ "<br>" + "git remote rename origin old-origin "+ "<br>" + "git remote add origin " +repostoryURL+ "<br>"+"git push - u origin --all " + "<br>" + "git push -u origin --tags";
                     
+           
             
         }
 </script>
