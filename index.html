@@ -5,7 +5,8 @@
     <link rel="stylesheet" type="text/css" href="css/reset.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="css/style.css">    
+    <link rel="stylesheet" type="text/css" href="css/style.css"> 
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
 <body>
   <header>     
@@ -36,6 +37,9 @@
                     <div class="input-group mb-3">    
                         <input type="text" id="gitemail" class="form-control" placeholder="Git Email" required autofocus>
                     </div>
+                    <div class="input-group mb-3">    
+                        <input type="text" id="gitcommit" class="form-control" placeholder="Git Commit" required autofocus>
+                    </div>
                     <div class="input-group mb-3">
                         <input type="text" id="repostory" class="form-control" placeholder="Repostory URL" required autofocus>
                     </div>
@@ -48,16 +52,52 @@
     </div>  
 </div>   
     
-    <p id="disgitname"></p>
-    <p id="disgitemail"></p>
-    <p id="disrepostory"></p>
+    
+    <div class="w3-panel w3-card w3-light-grey">
+      <h3>Git global setup</h3>
+      <div class="w3-code notranslate">
+        <p id="gitglobal"></p>
+      </div>
+    </div>
+    
+    <div class="w3-panel w3-card w3-light-grey">
+      <h3>Create a new repository</h3>
+      <div class="w3-code notranslate">
+        <p id="newrepository"></p>
+      </div>
+    </div>
+    
+    <div class="w3-panel w3-card w3-light-grey">
+      <h3>Existing folder</h3>
+      <div class="w3-code notranslate">
+        <p id="existingfolder"></p>
+      </div>
+    </div>
+    
+    <div class="w3-panel w3-card w3-light-grey">
+      <h3>Existing Git repository</h3>
+      <div class="w3-code notranslate">
+        <p id="existingGitrepository"></p>
+      </div>
+    </div>
+
     <script>
         function gitGenerator() {
-            document.getElementById("disgitname").innerHTML = "Git Name: "+ document.getElementById("gitname").value;
-
-            document.getElementById("disgitemail").innerHTML = "Git Email: "+ document.getElementById("gitemail").value;
-
-            document.getElementById("disrepostory").innerHTML =  "Git Repostory: "+ document.getElementById("repostory").value + ".git";
+            var gitname = document.getElementById("gitname").value;
+            var gitemail = document.getElementById("gitemail").value;
+            var repostoryURL = document.getElementById("repostory").value + ".git";
+            var gitcommit = document.getElementById("gitcommit").value;
+            
+            
+            document.getElementById("gitglobal").innerHTML = "git config --global user.name "+ '"'+gitname+'"' + "<br>" + "git config --global user.email "+ '"'+gitemail+'"';
+            
+            document.getElementById("newrepository").innerHTML = "git clone "+ '"'+repostoryURL+'"' + "<br>" + "cd "+ '"'+repostoryURL+'"'+ "<br>"+"touch README.md " + "<br>" + "git add README.md" + "<br>" + "git commit -m "+'"'+gitcommit+'"'+ "<br>"  +"git push -u origin master";
+            
+            document.getElementById("existingfolder").innerHTML = "cd existing_folder  "+ "<br>" + "git init "+ "<br>" + "git remote add origin " +repostoryURL+ "<br>"+"git add . " + "<br>" + "git commit -m" + "<br>" + "git commit -m "+'"'+gitcommit+'"'+ "<br>" + "git push -u origin master";
+            
+            document.getElementById("existingGitrepository").innerHTML = "cd existing_folder  "+ "<br>" + "git remote rename origin old-origin "+ "<br>" + "git remote add origin " +repostoryURL+ "<br>"+"git push - u origin --all " + "<br>" + "git push -u origin --tags";
+                    
+            
         }
 </script>
     
