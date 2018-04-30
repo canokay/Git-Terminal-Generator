@@ -42,16 +42,16 @@
                     <i class="fab fa-github fa-5x"></i>
                     <i class="fab fa-gitlab fa-5x"></i>
                     <div class="input-group mb-3">
-                        <input type="text" id="gitname" class="form-control" placeholder="Git Name" required autofocus>
+                        <input type="text" id="gitname" class="form-control" placeholder="Git Name" required="required">
                     </div>
                     <div class="input-group mb-3">    
-                        <input type="text" id="gitemail" class="form-control" placeholder="Git Email" required autofocus>
+                        <input type="text" id="gitemail" class="form-control" placeholder="Git Email" required="required">
                     </div>
                     <div class="input-group mb-3">
-                        <input type="text" id="repostory" class="form-control" placeholder="Repostory URL" required autofocus>
+                        <input type="text" id="repostory" class="form-control" placeholder="Repostory URL" required="required">
                     </div>
                     <div class="input-group mb-3">    
-                        <input type="text" id="gitcommit" class="form-control" placeholder="Git Commit" required autofocus>
+                        <input type="text" id="gitcommit" class="form-control" placeholder="Git Commit" required="required">
                     </div>
                     <button class="btn btn-lg btn-success btn-block" onclick="gitGenerator()">
                         Generator
@@ -94,8 +94,8 @@
     </div>
 <script>
 function gitGenerator() {
-    document.getElementById("deneme").style.visibility = "visible";
-    var gitname = document.getElementById("gitname").value;
+            document.getElementById("deneme").style.visibility = "visible";
+            var gitname = document.getElementById("gitname").value;
             var gitemail = document.getElementById("gitemail").value;
             var repostoryURL = document.getElementById("repostory").value + ".git";
             var gitcommit = document.getElementById("gitcommit").value;
