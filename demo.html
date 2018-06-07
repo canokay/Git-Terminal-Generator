@@ -9,7 +9,7 @@
     <link rel="apple-touch-icon" href="assets/img/kit/free/apple-icon.png">
     <link rel="icon" href="assets/img/kit/logo.png">
     <title>
-        Git Terminal Generator &#45; Can Okay
+        Demo - Git Terminal Generator Can Okay
     </title>
     <!--     Fonts and icons     -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
@@ -20,16 +20,15 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
     
     <link rel="stylesheet" href="assets/css/material-kit.css?v=2.0.2">
-    
     <!-- Documentation extras -->
     <!-- CSS Just for demo purpose, don't include it in your project -->
     <link href="assets/assets-for-demo/demo.css" rel="stylesheet" />
     <!-- iframe removal -->
     <style>
-        .javascriptcolor{
-            background: #f7df1e;
+         #gitcode{
+          visibility:hidden;      
         }
-    </style>
+        </style>
 </head>
 
 <body class="landing-page ">
@@ -58,12 +57,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <h1 class="title"> <i class="fab fa-git"></i> Git Terminal Generator</h1>
-                    <h4>Git terminal kodlarını kendi repostorynize uyarlayabileceğiniz sistem.</h4>
-                    <br>
-                    <a href="demo.html" class="btn btn-success btn-raised btn-lg">
-                         Demo
-                    </a>
+                    <h1 class="title"> <i class="fab fa-git"></i> Git Terminal Generator - Demo</h1>
+                    
                 </div>
             </div>
         </div>
@@ -74,78 +69,91 @@
                 <div class="row">
                     <div class="col-md-8 ml-auto mr-auto">
                         <h2 class="title">Git Terminal Generator</h2>
-                        
+                         <div class="container ml-auto mr-auto">
+        <div class="container ml-auto mr-auto">
+        <div class="row ml-auto mr-auto">
+            <div class="col-sm-6 col-md-6 ml-auto mr-auto">
+                
+                <div class="account-wall">
+                    
+                    <div class="input-group mb-4">
+                        <input type="text" id="gitname" class="form-control" placeholder="Git Name" required="required">
                     </div>
-                </div>
-                <div class="features">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="info">
-                                <div class="icon">
-                                    <i class="fab fa-js"></i>
-                                </div>
-                                <h4 class="info-title">JavaScript</h4>
-                                <p>Git Bash Kodları için javascript kullanıldı.</p>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="info">
-                                <div class="icon">
-                                    <i class="fab fa-js"></i>
-                                </div>
-                                <h4 class="info-title">Verified Users</h4>
-                                <p>Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough.</p>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="info">
-                                <div class="icon icon-danger ">
-                                    <i class="fab fa-github"></i>
-                                </div>
-                                <h4 class="info-title">Fingerprint</h4>
-                                <p>Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough.</p>
-                            </div>
-                        </div>
+                    <div class="input-group mb-4">    
+                        <input type="text" id="gitemail" class="form-control" placeholder="Git Email" required="required">
                     </div>
+                    <div class="input-group mb-4">
+                        <input type="text" id="repostory" class="form-control" placeholder="Repostory URL" required="required">
+                    </div>
+                    <div class="input-group mb-4">    
+                        <input type="text" id="gitcommit" class="form-control" placeholder="Git Commit" required="required">
+                    </div>
+                    <button class="btn btn-lg btn-success btn-block" onclick="gitGenerator()">
+                        Generator
+                    </button>
                 </div>
             </div>
-            <div class="section text-center">
-                <h2 class="title">Here is our team</h2>
-                <div class="team">
-                    <div class="row">
-                        <div class="col-md-4 ml-auto mr-auto">
-                            <div class="team-player">
-                                <div class="card card-plain">
-                                    <div class="col-md-6 ml-auto mr-auto">
-                                        
-                                        
-                                <img src="https://secure.gravatar.com/avatar/a3a4d3a51b102a16d48f0aee74360afehttps://secure.gravatar.com/avatar/a3a4d3a51b102a16d48f0aee74360afe?s=800" alt="Circle Image" class="img-raised rounded-circle img-fluid">
-                                        
-                                    </div>
-                                    <h4 class="card-title">Can Okay
-                                        <br>
-                                        <small class="card-description text-muted">Developer</small>
-                                    </h4>
-                                    <div class="card-body">
-                                        <p class="card-description">Android, iOS, React Native, Algorithms (Python and Java) </p>
-                                    </div>
-                                    <div class="card-footer justify-content-center">
-                                        <a href="https://www.facebook.com/canokaypage" target="_blank" class="btn btn-link btn-just-icon"><i class="fab fa-facebook"></i></a>
-                                <a href="https://www.twitter.com/cannokay" target="_blank" class="btn btn-link btn-just-icon"><i class="fab fa-twitter"></i></a>
-                                <a href="https://www.linkedin.com/in/cannokay" target="_blank" class="btn btn-link btn-just-icon"><i class="fab fa-linkedin"></i></a>
-                                <a href="https://www.github.com/canokay" target="_blank" class="btn btn-link btn-just-icon"><i class="fab fa-github"></i></a>
-                                <a href="https://www.youtube.com/cannokay" target="_blank" class="btn btn-link btn-just-icon"><i class="fab fa-youtube"></i></a>
-                                <a href="https://www.instagram.com/cannokay" target="_blank" class="btn btn-link btn-just-icon"><i class="fab fa-instagram"></i></a>
-                                <a href="https://medium.com/@canokay" target="_blank" class="btn btn-link btn-just-icon"><i class="fab fa-medium"></i></a>
-                                <a href="https://medium.com/@canokayblog" target="_blank" class="btn btn-link btn-just-icon"><i class="fab fa-medium"></i></a>
-                                <a href="mailto:canokay2014@gmail.com" target="_blank" class="btn btn-link btn-just-icon"><i class="far fa-envelope"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+        </div>
+    </div>  
+</div>
+                      <div id="gitcode" class="text-left">
+     <div class="container ml-auto mr-auto">
+        <div class="w3-panel w3-card w3-light-grey">
+          <h3>Git global setup</h3>
+          <div class="w3-code notranslate">
+            <p id="gitglobal"></p>
+          </div>
+        </div>
+        <div class="w3-panel w3-card w3-light-grey">
+          <h3>Create a new repository</h3>
+          <div class="w3-code notranslate">
+            <p id="newrepository"></p>
+          </div>
+        </div>
+
+        <div class="w3-panel w3-card w3-light-grey">
+          <h3>Existing folder</h3>
+          <div class="w3-code notranslate">
+            <p id="existingfolder"></p>
+          </div>
+        </div>
+
+        <div class="w3-panel w3-card w3-light-grey">
+          <h3>Existing Git repository</h3>
+          <div class="w3-code notranslate">
+            <p id="existingGitrepository"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+<script>
+function gitGenerator() {
+            document.getElementById("gitcode").style.visibility = "visible";
+            var gitname = document.getElementById("gitname").value;
+            var gitemail = document.getElementById("gitemail").value;
+            var repostoryURL = document.getElementById("repostory").value + ".git";
+            var gitcommit = document.getElementById("gitcommit").value;
+        
+            
+            
+            document.getElementById("gitglobal").innerHTML = "git config --global user.name "+ '"'+gitname+'"' + "<br>" + "git config --global user.email "+ '"'+gitemail+'"';
+            
+            document.getElementById("newrepository").innerHTML = "git clone " +repostoryURL+ "<br>" + "cd repostory_folder"+"<br>"+"touch README.md " + "<br>" + "git add README.md" + "<br>" + "git commit -m "+'"'+gitcommit+'"'+ "<br>"  +"git push -u origin master";
+            
+            document.getElementById("existingfolder").innerHTML = "cd existing_folder  "+ "<br>" + "git init "+ "<br>" + "git remote add origin " +repostoryURL+ "<br>"+"git add . " + "<br>"+ "git commit -m "+'"'+gitcommit+'"'+ "<br>" + "git push -u origin master";
+            
+            document.getElementById("existingGitrepository").innerHTML = "cd existing_folder  "+ "<br>" + "git remote rename origin old-origin "+ "<br>" + "git remote add origin " +repostoryURL+ "<br>"+"git push - u origin --all " + "<br>" + "git push -u origin --tags";
+                    
+    
+    
+}
+</script>  
                     </div>
                 </div>
+                
             </div>
+            
+            
         </div>
     </div>
     <footer class="footer ">
